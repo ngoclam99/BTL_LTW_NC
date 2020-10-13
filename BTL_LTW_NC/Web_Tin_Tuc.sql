@@ -36,7 +36,7 @@ end
 exec get_tinnong
 
 ---- get danh muc menu----
-create proc get_danhmuc_menu
+alter proc get_danhmuc_menu
 as
 begin
 	select * from tbl_danhmuc

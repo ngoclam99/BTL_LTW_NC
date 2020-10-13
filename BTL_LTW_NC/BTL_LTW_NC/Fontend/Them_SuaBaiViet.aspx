@@ -19,7 +19,7 @@
 
         <%--Loại tin--%>
         <label for="country">Loại tin</label>
-        <asp:DropDownList ID="loaitin" AutoPostBack="true" CssClass="textb" runat="server">
+        <asp:DropDownList ID="loaitin"  CssClass="textb" runat="server">
         </asp:DropDownList>
         <%--Hình ảnh đại diện--%>
         <asp:FileUpload ID="anhdaidien" runat="server" /> <br />
