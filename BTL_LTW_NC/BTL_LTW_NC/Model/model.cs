@@ -143,5 +143,24 @@ namespace BTL_LTW_NC.Model
             SqlDataReader reader = cmd.ExecuteReader();
             return reader;
         }
+
+        // gọi hàm tạo mã tự động ở đây
+
+        public static string Create_Key(string key_noi, string key_where, string table)
+        {
+            //key_noi    = "'KH'";
+            //key_where  = "sMaKH";
+            //table      = "tbl_khachang";
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            string truyvan = "Select CONCAT(" + key_noi + ", RIGHT(CONCAT('0000',ISNULL(right(max(" + key_where + "),4),0) + 1),4)) as " + key_where + " from " + table + " where " + key_where + " like " + key_noi + "+'%' ";
+            command.CommandText = truyvan;
+            command.Connection = conn;
+            object data = command.ExecuteScalar();
+            string ma = data.ToString();
+            return ma;
+        }
     }
 }

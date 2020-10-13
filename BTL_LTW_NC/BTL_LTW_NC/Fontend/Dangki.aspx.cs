@@ -27,7 +27,8 @@ namespace BTL_LTW_NC.Fontend
 
         protected void btnDangki_Click(object sender, EventArgs e)
         {
-            SqlDataReader tb = Model.model.getDangki(txtMaTaiKhoan.Text,txtTendangnhap.Text,txtMatkhau.Text,txtHoten.Text,txtEmail.Text,txtSdt.Text,
+            string id_tk = Model.model.Create_Key("'TK'", "PK_sMaTK", "tbl_taikhoan");
+            SqlDataReader tb = Model.model.getDangki(id_tk,txtTendangnhap.Text,txtMatkhau.Text,txtHoten.Text,txtEmail.Text,txtSdt.Text,
                 ddlQuyen.SelectedValue,"get_dangki");
             if (tb.HasRows)
             {

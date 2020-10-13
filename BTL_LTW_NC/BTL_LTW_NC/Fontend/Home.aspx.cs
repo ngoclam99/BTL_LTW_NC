@@ -38,15 +38,15 @@ namespace BTL_LTW_NC.Fontend
         private void getTindown()
         {
             DataTable tb = Model.model.getData("get_tin_down");
-            rpt_content_center.DataSource = tb;
-            rpt_content_center.DataBind();
+            //rpt_content_center.DataSource = tb;
+            //rpt_content_center.DataBind();
         }
 
         private void getTinLeft()
         {
             DataTable tb = Model.model.getData("get_tin_right");
-            rpt_tin_right.DataSource = tb;
-            rpt_tin_right.DataBind();
+            //rpt_tin_right.DataSource = tb;
+            //rpt_tin_right.DataBind();
         }
 
         private void getTinNong()

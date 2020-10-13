@@ -7,31 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BTL_LTW_NC.Fontend
-{
-
-
-    public partial class Dangki
-    {
-
-        /// <summary>
-        /// txtMaTaiKhoan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaTaiKhoan;
-
-        /// <summary>
-        /// rfvMataikhoan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvMataikhoan;
-
+namespace BTL_LTW_NC.Fontend {
+    
+    
+    public partial class Dangki {
+        
         /// <summary>
         /// txtHoten control.
         /// </summary>
@@ -40,7 +20,7 @@ namespace BTL_LTW_NC.Fontend
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtHoten;
-
+        
         /// <summary>
         /// rfvHoten control.
         /// </summary>
@@ -49,7 +29,7 @@ namespace BTL_LTW_NC.Fontend
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvHoten;
-
+        
         /// <summary>
         /// txtTendangnhap control.
         /// </summary>
@@ -58,7 +38,7 @@ namespace BTL_LTW_NC.Fontend
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTendangnhap;
-
+        
         /// <summary>
         /// rfvTendangnhap control.
         /// </summary>
@@ -67,7 +47,7 @@ namespace BTL_LTW_NC.Fontend
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTendangnhap;
-
+        
         /// <summary>
         /// txtMatkhau control.
         /// </summary>
@@ -76,7 +56,7 @@ namespace BTL_LTW_NC.Fontend
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMatkhau;
-
+        
         /// <summary>
         /// rfvMatkhau control.
         /// </summary>
@@ -85,7 +65,7 @@ namespace BTL_LTW_NC.Fontend
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvMatkhau;
-
+        
         /// <summary>
         /// txtEmail control.
         /// </summary>
@@ -94,7 +74,7 @@ namespace BTL_LTW_NC.Fontend
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
-
+        
         /// <summary>
         /// rfvEmail control.
         /// </summary>
@@ -103,7 +83,7 @@ namespace BTL_LTW_NC.Fontend
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail;
-
+        
         /// <summary>
         /// txtSdt control.
         /// </summary>
@@ -112,7 +92,7 @@ namespace BTL_LTW_NC.Fontend
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSdt;
-
+        
         /// <summary>
         /// rfvSdt control.
         /// </summary>
@@ -121,7 +101,7 @@ namespace BTL_LTW_NC.Fontend
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSdt;
-
+        
         /// <summary>
         /// ddlQuyen control.
         /// </summary>
@@ -130,7 +110,7 @@ namespace BTL_LTW_NC.Fontend
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlQuyen;
-
+        
         /// <summary>
         /// rfvQuyen control.
         /// </summary>
@@ -139,7 +119,7 @@ namespace BTL_LTW_NC.Fontend
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvQuyen;
-
+        
         /// <summary>
         /// lbthongbao control.
         /// </summary>
@@ -148,7 +128,7 @@ namespace BTL_LTW_NC.Fontend
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbthongbao;
-
+        
         /// <summary>
         /// btnDangki control.
         /// </summary>
@@ -157,7 +137,7 @@ namespace BTL_LTW_NC.Fontend
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDangki;
-
+        
         /// <summary>
         /// btnHuy control.
         /// </summary>

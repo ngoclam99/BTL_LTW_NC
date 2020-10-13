@@ -63,14 +63,14 @@ namespace BTL_LTW_NC
             {
                 anhdaidien.SaveAs(Server.MapPath("~/Fontend/img/" + anhdaidien.FileName));
                 anhdaidienbv = anhdaidien.FileName;
-                SqlDataReader x = Model.model.Sua_baiviet("them_Suabaiviet", id, loaitinbv, tenbv, tieudebv, tombatbv, noidungbv, Session["iduser"].ToString(), DateTime.Now.ToString("dd/MM/yyyy"), anhdaidienbv, "sua");
+                SqlDataReader x = Model.model.Sua_baiviet("them_Suabaiviet", id, loaitinbv, tenbv, tieudebv, tombatbv, noidungbv, Session["iduser"].ToString(), DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss"), anhdaidienbv, "sua");
             }
             else
             {
-                SqlDataReader x = Model.model.Sua_baiviet("them_Suabaiviet", id, loaitinbv, tenbv, tieudebv, tombatbv, noidungbv, Session["iduser"].ToString(), DateTime.Now.ToString("dd/MM/yyyy"), "khongco", "sua");
+                SqlDataReader x = Model.model.Sua_baiviet("them_Suabaiviet", id, loaitinbv, tenbv, tieudebv, tombatbv, noidungbv, Session["iduser"].ToString(), DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss"), "khongco", "sua");
             }
             Response.Write("<script languague='javascript'> alert('Cập nhập bài viết thành công !');</script>");
-            //Response.Redirect("QuanLyBaiViet.aspx");
+            Response.Redirect("QuanLyBaiViet.aspx");
         }
 
 
@@ -90,7 +90,7 @@ namespace BTL_LTW_NC
                 anhdaidien.SaveAs(Server.MapPath("~/Fontend/img/" + anhdaidien.FileName));
                 anhdaidienbv = anhdaidien.FileName;
             }
-            SqlDataReader x = Model.model.Sua_baiviet("them_Suabaiviet", id, loaitinbv, tenbv, tieudebv, tombatbv, noidungbv, Session["iduser"].ToString(), DateTime.Now.ToString("dd/MM/yyyy"), anhdaidienbv, "them");
+            SqlDataReader x = Model.model.Sua_baiviet("them_Suabaiviet", id, loaitinbv, tenbv, tieudebv, tombatbv, noidungbv, Session["iduser"].ToString(), DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss"), anhdaidienbv, "them");
             Response.Write("<script languague='javascript'> alert('Thêm bài viết thành công !');</script>");
             Response.Redirect("QuanLyBaiViet.aspx");
         }

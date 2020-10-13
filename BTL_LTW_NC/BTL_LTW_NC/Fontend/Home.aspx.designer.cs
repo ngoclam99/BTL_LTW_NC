@@ -22,24 +22,6 @@ namespace BTL_LTW_NC.Fontend {
         protected global::System.Web.UI.WebControls.Repeater rptTinNong;
         
         /// <summary>
-        /// rpt_tin_right control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rpt_tin_right;
-        
-        /// <summary>
-        /// rpt_content_center control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rpt_content_center;
-        
-        /// <summary>
         /// rptTinMoi control.
         /// </summary>
         /// <remarks>

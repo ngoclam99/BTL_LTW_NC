@@ -4,8 +4,8 @@
 
     <div class="content">
         <div class="content-left">
-            <h1>Sự kiện nóng </h1>
-            <div class="ct-left">
+            <div class="center-content">
+                 <h1>Sự kiện nóng </h1>
                 <asp:Repeater ID="rptTinNong" runat="server">
                     <ItemTemplate>
                          <a href="ChiTietBaiViet.aspx?id=<%#Eval("PK_sMabaiviet") %>">
@@ -17,37 +17,6 @@
                             <p class="noidung-tinnong">
                                <%#Eval("sTomtatnoidung") %>
                             </p>
-                        </a>
-                    </ItemTemplate>
-                </asp:Repeater>
-               
-            </div>
-            <div class="ct-right">
-                <p>&nbsp; <span>
-                    <img src="img/desktop1.png" alt=""></span></p>
-                <ul class="ul-content-right">
-                    <asp:Repeater ID="rpt_tin_right" runat="server">
-                        <ItemTemplate>
-                            <li>
-                                <a href="ChiTietBaiViet.aspx?id=<%#Eval("PK_sMabaiviet") %>" title="<%#Eval("sTenbaiviet") %>">
-                                    <img src="img/<%#Eval("sAnhdaidien") %>" class="img_danhmuc_righ" title="<%#Eval("sTenbaiviet") %>"> <%#Eval("sTenbaiviet") %></a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p><small>Ngày đăng: <%#Eval("sNgaydang") %></small></p>
-                            </li>
-                        </ItemTemplate>
-                         
-                    </asp:Repeater>
-                   
-                </ul>
-            </div>
-
-            <div class="center-content">
-                <asp:Repeater ID="rpt_content_center" runat="server">
-                    <ItemTemplate>
-                        <a href="ChiTietBaiViet.aspx?id=<%#Eval("PK_sMabaiviet") %>" title="<%#Eval("sTenbaiviet") %>">
-                            <img src="img/<%#Eval("sAnhdaidien") %>" class="anh-drow-tinnong" title="<%#Eval("sTenbaiviet") %>">
-                            <p> <%#Eval("sTenbaiviet") %></p>
-                            <small><%#Eval("sNgaydang") %></small>
-                            <p class="p-drow"><%#Eval("sTomtatnoidung") %></p>
                         </a>
                     </ItemTemplate>
                 </asp:Repeater>

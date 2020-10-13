@@ -8,15 +8,6 @@
                         </tr>
                         <tr>
                             <td>
-                                Mã tài khoản:
-                            </td>
-                            <td>
-                                <asp:TextBox ID="txtMaTaiKhoan" runat="server"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="rfvMataikhoan" CssClass="ColorRed" ControlToValidate="txtMaTaiKhoan" runat="server" ErrorMessage="Mã tài khoản không được để trống!" Font-Bold="True"></asp:RequiredFieldValidator>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
                                 Họ tên:
                             </td>
                             <td>
