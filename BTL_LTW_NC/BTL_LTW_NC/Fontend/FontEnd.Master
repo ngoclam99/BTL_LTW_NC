@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FontEnd.master.cs" Inherits="BTL_LTW_NC.Fontend.FontEnd" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Website đọc tin tức FNew</title>
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<form id="form1" runat="server">
+	<div class="wraper">
+		<div class="container">
+			<div class="header">
+				<div class="header-left">
+					<h2 class="logo"><a href="Home.aspx" style="color:#fff;" title="Website đọc tin tức FNew">FNews</a></h2>
+				</div>
+				<div class="header-right">
+                    <asp:TextBox ID="txtSearch" runat="server" CssClass="input-timkiem" placeholder="Tìm kiếm tin tức..."></asp:TextBox>
+					<%--<input type="text" class="input-timkiem" placeholder="Tìm kiếm tin tức..." name="searchkey">
+					<button type="submit" class="btn btn-timkiem" title="Tìm kiếm" style="cursor:pointer;" >Tìm kiếm</button>--%>
+                    <asp:Button ID="btnTimkiem" runat="server" Text="Tìm kiếm" CssClass="btn btn-timkiem" style="cursor:pointer;" OnClick="btnTimkiem_Click"/>
+				</div>
+			</div>
+			<div class="menu">
+                <ul class="menu-ul">
+                    <asp:Repeater ID="rptMenu" runat="server">
+                        <ItemTemplate>
+                            <li class="menu-li"><a class="iconhome hidearrow" title="<%#Eval("sTenDM") %>" href="<%#Eval("sRouter") %>"><a href="SubPage.aspx?id=<%#Eval("PK_iMaDM") %>" title="<%#Eval("sTenDM") %>"><%#Eval("sTenDM") %></a></a></li>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                    <% if (Session["tenuser"] != "") {%>
+                       <li style="background: #F44336;color: #fff;">Tài khoản: <b><span id="spuser" runat="server"></span></b>
+                       <li><a class="iconhome hidearrow" href="DangNhap.aspx?mode=logout" title="Đăng xuất">Đăng xuất</a></li>
+						<li><a class="iconhome hidearrow" href="Doimatkhau.aspx" title="Đổi mật khẩu">Đổi mật khẩu</a></li>
+                    <% } %>
+                    <% if (Session["tenuser"] == "") {%>
+						<li><a class="iconhome hidearrow" href="Dangki.aspx" title="Đăng kí">Đăng kí</a>
+						<li><a class="iconhome hidearrow" href="DangNhap.aspx" title="Đăng nhập">Đăng nhập</a>
+                    <% } %>
+                    <% if (Session["maquyen"] != "") {%>
+                       <li><a href="DuyetBaiViet.aspx" title="Quản lý bài viết">Duyệt bài viết</a>
+                       <li> <a href="QuanLyBaiViet.aspx">Quản lý bài viết</a><li>
+                    <% } %>
+                    <% if (Session["tenuser"] != "" && Session["maquyen"].ToString()=="1") {%>
+                        <li><a class="iconhome hidearrow" title="Duyệt bài viết" href="DuyetBaiViet.aspx">Duyệt bài viết<a><li>
+                    <% } %>
+                </ul>
+			</div>
+            <br />
+			<hr>
+            <asp:ContentPlaceHolder ID="Content" runat="server"></asp:ContentPlaceHolder>
+			<div class="footer">
+				<p>
+					website tin tức được phát triển bởi sinh viên fithou khoa công nghệ thông tin trường đại học ở hà Nội
+				</p>
+				<p>
+					<small class="text-center">Địa chỉ: 96 Định Công, Thanh Xuân, Hà Nội</small>
+					
+				</p>
+				<p>
+					<small>Chỉ được phát hành lại thông tin từ website này khi có sự đồng ý bằng văn bản của báo nhóm sinh viên fithou</small>
+				</p>
+			</div>
+		</div>
+	</div>
+</form>
+</body>
+</html>
