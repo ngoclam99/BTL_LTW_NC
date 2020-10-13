@@ -67,6 +67,24 @@ namespace BTL_LTW_NC {
         protected global::System.Web.UI.WebControls.TextBox tomtatnoidung;
         
         /// <summary>
+        /// Label4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label4;
+        
+        /// <summary>
+        /// ddlDanhmuc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlDanhmuc;
+        
+        /// <summary>
         /// loaitin control.
         /// </summary>
         /// <remarks>

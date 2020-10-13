@@ -13,9 +13,10 @@ namespace BTL_LTW_NC
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            hienthi_loaitin();
             if (!IsPostBack)
             {
+                hienthi_danhmuc();
+                
                 if (Request.QueryString["id"] != "")
                 {
                     btnThem.Style["visibility"] = "hidden";
@@ -37,16 +38,28 @@ namespace BTL_LTW_NC
                 }
             }
         }
-        private void hienthi_loaitin()
+        private void hienthi_loaitin(string ma_dm)
+        {
+            DataTable tb = Model.model.getDataWhere(ma_dm, "get_loaitin");
+            //DataTable tb = Model.model.getData("get_loaitin");
+            loaitin.DataSourceID = null;
+            loaitin.DataSource = tb;
+            loaitin.DataTextField = "sTenLT";
+            loaitin.DataValueField = "PK_iMaLT" ;
+            loaitin.DataBind();
+           
+        }
+
+        private void hienthi_danhmuc()
         {
             if (!Page.IsPostBack)
             {
-                DataTable tb = Model.model.getData("get_loaitin");
-                loaitin.DataSourceID = null;
-                loaitin.DataSource = tb;
-                loaitin.DataTextField = "sTenLT";
-                loaitin.DataValueField = "PK_iMaLT";
-                loaitin.DataBind();
+                DataTable tb = Model.model.getData("get_danhmuc_menu");
+                ddlDanhmuc.DataSourceID = null;
+                ddlDanhmuc.DataSource = tb;
+                ddlDanhmuc.DataTextField = "sTenDM";
+                ddlDanhmuc.DataValueField = "PK_iMaDM";
+                ddlDanhmuc.DataBind();
             }
         }
 
@@ -98,6 +111,11 @@ namespace BTL_LTW_NC
         protected void btnQuayLai_Click(object sender, EventArgs e)
         {
             Response.Redirect("QuanLyBaiViet.aspx");
+        }
+
+        protected void ddlDanhmuc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            hienthi_loaitin(ddlDanhmuc.SelectedValue);
         }
     }
 }

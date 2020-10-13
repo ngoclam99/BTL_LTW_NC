@@ -11,9 +11,15 @@
         <%--Tóm tắt nội dung--%>
         <asp:Label ID="Label2" runat="server" Text="Tóm tắt"></asp:Label>
         <asp:TextBox ID="tomtatnoidung" CssClass ="textb" runat="server"></asp:TextBox>
+            
+
+        <asp:Label ID="Label4" runat="server" Text="Danh mục"></asp:Label>
+        <asp:DropDownList ID="ddlDanhmuc" CssClass="textb" runat="server" AutoPostBack="true"  OnSelectedIndexChanged="ddlDanhmuc_SelectedIndexChanged"></asp:DropDownList> </br>
+        <%--<asp:TextBox ID="TextBox1" CssClass ="textb" runat="server"></asp:TextBox>--%>
+
         <%--Loại tin--%>
         <label for="country">Loại tin</label>
-        <asp:DropDownList ID="loaitin" CssClass="textb" runat="server">
+        <asp:DropDownList ID="loaitin" AutoPostBack="true" CssClass="textb" runat="server">
         </asp:DropDownList>
         <%--Hình ảnh đại diện--%>
         <asp:FileUpload ID="anhdaidien" runat="server" /> <br />
